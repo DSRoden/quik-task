@@ -1,0 +1,13 @@
+h3 Priorities
+.row
+  .col-xs-3
+    form(novalidate, name='prioritiesForm', role='form')
+      .form-group
+        label(for='taskname') Task Name
+        input.form-control#taskname(ng-minlength='3', name='name', type='text', ng-model='priority.name', required, autofocus)
+      .form-group
+        label(for='taskcolor')
+        input.form-control#taskcolor(name='taskcolor', type='color', ng-model='priority.color', required, autofocus)
+      .form-group
+        button.btn.btn-success(ng-show='prioritiesForm.$valid', ng-click='add()') Add Priority
+  .col-xs-9
